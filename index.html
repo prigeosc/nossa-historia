@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossa História ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#ff6fa5;--texto:#444;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:linear-gradient(180deg,#fff7fa,#fff);color:var(--texto);overflow-x:hidden}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:-1}
+.star{position:absolute;width:3px;height:3px;background:#ffd6e7;border-radius:50%;animation:blink 3s infinite}
+@keyframes blink{50%{opacity:.2}}
+.hero{height:100vh;background:url('foto-capa.jpeg') center/cover;display:flex;justify-content:center;align-items:center;text-align:center;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.hero-content{position:relative;color:#fff;padding:20px}
+.hero h1{font-family:'Great Vibes',cursive;font-size:5rem}
+.btn{display:inline-block;margin-top:25px;padding:14px 28px;border-radius:30px;background:#fff;color:#ff4d88;text-decoration:none;font-weight:bold}
+section{padding:80px 20px;max-width:1100px;margin:auto}
+h2{text-align:center;margin-bottom:30px;color:#d63384}
+.counter,.gallery{display:grid;gap:20px}
+.counter{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.gallery{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card,.music,.dreams,.letter{background:#fff;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.card{text-align:center}
+.card span{font-size:2rem;font-weight:bold;color:#d63384}
+.polaroid{background:#fff;padding:10px;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,.15);transition:.4s}
+.polaroid:hover{transform:scale(1.05)}
+.polaroid img{width:100%;height:300px;object-fit:cover}
+.polaroid p{text-align:center;padding:10px;font-style:italic}
+.reason{text-align:center}
+.reason button,.open-btn{padding:15px 30px;border:none;background:#ff6fa5;color:#fff;border-radius:30px;cursor:pointer}
+.reason-box{margin-top:20px;font-size:1.2rem;font-weight:bold;color:#d63384}
+.timeline{border-left:4px solid #ff8bb5;padding-left:25px}
+.timeline-item{margin-bottom:25px}
+footer{padding:80px 20px;text-align:center;background:#d63384;color:#fff}
+footer h2{font-family:'Great Vibes',cursive;font-size:3rem;color:#fff}
+.letter{display:none;line-height:1.8;animation:fade .6s}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(max-width:768px){.hero h1{font-size:3rem}}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<header class="hero">
+<div class="hero-content">
+<h1>Nossa História ❤️</h1>
+<p>🌎❤️ Você é a minha pessoa favorita em todos os lugares do mundo.</p>
+<p>Porque o melhor destino sempre foi você.</p>
+<a href="#contador" class="btn">✨ Começar nossa história</a>
+</div>
+</header>
+
+<section id="contador">
+<h2>⏳ Estamos juntas há...</h2>
+<div class="counter">
+<div class="card"><span id="dias">0</span><p>Dias de amor</p></div>
+<div class="card"><span id="horas">0</span><p>Horas</p></div>
+<div class="card"><span id="minutos">0</span><p>Minutos</p></div>
+<div class="card"><span id="segundos">0</span><p>Segundos</p></div>
+</div>
+</section>
+
+<section>
+<h2>🎵 Nossa Trilha Sonora</h2>
+<div class="music">
+<p>🎶 Te Amo Sem Culpa — Carol Biazin</p>
+<p>🎶 Devagarinho — Gilsons</p>
+<p>🎶 Low Profile — Carol Biazin</p>
+<p>🎶 Lembrei de Nós — João Gomes</p>
+<p>🎶 Falei de Você Para Minha Mãe — Elana Dara</p>
+
+
+<iframe style="border-radius:12px"
+src="https://open.spotify.com/embed/playlist/2kBYy9fkdGUlsbBSZINJDA"
+width="100%"
+height="352"
+frameBorder="0"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+<br>
+
+<p><strong>Algumas músicas contam histórias. Essas contam a nossa.</strong></p>
+
+</div>
+</section>
+
+<section>
+<h2>📸 Nosso Mural de Memórias</h2>
+<div class="gallery">
+<div class="polaroid"><img src="1.jpeg"><p>Uma foto simples que virou favorita.</p></div>
+<div class="polaroid"><img src="2.jpeg"><p>Nós e o mar.</p></div>
+<div class="polaroid"><img src="3.jpeg"><p>Meu lugar favorito é pertinho de você.</p></div>
+<div class="polaroid"><img src="4.jpeg"><p>O tempo desacelerou.</p></div>
+<div class="polaroid"><img src="5.jpeg"><p>Criando memórias.</p></div>
+<div class="polaroid"><img src="6.jpeg"><p>Descobrindo lugares.</p></div>
+<div class="polaroid"><img src="7.jpeg"><p>Nós. Simplesmente nós.</p></div>
+<div class="polaroid"><img src="8.jpeg"><p>Nos shows da vida.</p></div>
+<div class="polaroid"><img src="9.jpeg"><p>Minha certeza mais bonita.</p></div>
+</div>
+</section>
+
+<section class="reason">
+<h2>😂 Coisas que eu amo em você</h2>
+<button onclick="novoMotivo()">🎲 Descobrir mais um motivo</button>
+<div class="reason-box" id="motivo"></div>
+</section>
+
+<section>
+<h2>📖 Linha do Tempo</h2>
+<div class="timeline">
+<div class="timeline-item"><h3>❤️ Primeira conversa</h3><p>O início de tudo.</p></div>
+<div class="timeline-item"><h3>☕ 24/10/2024</h3><p>Nosso primeiro encontro.</p></div>
+<div class="timeline-item"><h3>💋 25/10/2024</h3><p>Nosso primeiro beijo.</p></div>
+<div class="timeline-item"><h3>❤️ 25/10/2024</h3><p>Começamos oficialmente nossa história.</p></div>
+<div class="timeline-item"><h3>🌊 27/09/2025</h3><p>Nossa primeira viagem.</p></div>
+</div>
+</section>
+
+<section>
+<h2>💌 Uma carta para você</h2>
+<div style="text-align:center">
+<button class="open-btn" onclick="abrirCarta()">💌 Abrir Carta</button>
+<div class="letter" id="carta">
+<p>Meu amor,</p>
+<p>Só tenho a agradecer por cada momento que construímos juntas.</p>
+<p>Tu me fazes transbordar.</p>
+<p>Meu maior sonho é viver uma vida inteira ao teu lado.</p>
+<p>Tu és meu sorriso mais feliz, meu abraço favorito e meu lugar seguro.</p>
+<p>Te amo infinitamente ❤️</p>
+<p><b>Pri</b></p>
+</div>
+</div>
+</section>
+
+<footer>
+<h2>❤️ Para Sempre ❤️</h2>
+<p>Casa nunca foi um lugar.</p>
+<p>Casa sempre foi você.</p>
+</footer>
+
+<script>
+for(let i=0;i<80;i++){
+const s=document.createElement('div');
+s.className='star';
+s.style.left=Math.random()*100+'%';
+s.style.top=Math.random()*100+'%';
+s.style.animationDelay=Math.random()*3+'s';
+document.getElementById('stars').appendChild(s);
+}
+
+const inicio=new Date("2024-10-25T00:00:00");
+
+function atualizar(){
+const agora=new Date();
+const diff=agora-inicio;
+
+document.getElementById('dias').textContent=Math.floor(diff/86400000);
+document.getElementById('horas').textContent=Math.floor((diff%86400000)/3600000);
+document.getElementById('minutos').textContent=Math.floor((diff%3600000)/60000);
+document.getElementById('segundos').textContent=Math.floor((diff%60000)/1000);
+}
+setInterval(atualizar,1000);
+atualizar();
+
+const motivos=[
+"Nosso beijo","Tua risada","Teu abraço","Teu carinho",
+"Como você cuida de mim","Como você me faz rir",
+"Porque você é meu lugar favorito"
+];
+
+function novoMotivo(){
+document.getElementById("motivo").textContent=motivos[Math.floor(Math.random()*motivos.length)];
+}
+
+function abrirCarta(){
+const carta=document.getElementById("carta");
+carta.style.display=(carta.style.display==="block")?"none":"block";
+}
+</script>
+</body>
+</html>
