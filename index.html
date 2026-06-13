@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nossa História ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--rosa:#ff6fa5;
+--rosa-claro:#fff1f6;
+--texto:#444;
+--branco:#fff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:linear-gradient(180deg,#fff7fa,#ffffff);
+    color:var(--texto);
+    overflow-x:hidden;
+}
+
+/* estrelas */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:#ffd6e7;
+border-radius:50%;
+animation:blink 3s infinite;
+}
+
+@keyframes blink{
+50%{opacity:.2;}
+}
+
+/* capa */
+
+.hero{
+height:100vh;
+background:url('foto-capa.jpeg') center center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-family:Great Vibes;
+font-size:5rem;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+border-radius:30px;
+background:white;
+color:#ff4d88;
+font-weight:bold;
+text-decoration:none;
+}
+
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+color:#d63384;
+}
+
+/* contador */
+
+.counter{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card span{
+font-size:2rem;
+font-weight:bold;
+color:#d63384;
+}
+
+/* polaroids */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.polaroid{
+background:white;
+padding:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+border-radius:8px;
+transform:rotate(-2deg);
+transition:.4s;
+}
+
+.polaroid:hover{
+transform:scale(1.05) rotate(0deg);
+}
+
+.polaroid img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:4px;
+}
+
+.polaroid p{
+text-align:center;
+padding:10px;
+font-style:italic;
+}
+
+/* playlist */
+
+.nossa-musica{
+    text-align:center;
+}
+
+.music-btn{
+    background:#ff6fa5;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.music{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.music-btn:hover{
+    transform:scale(1.05);
+}
+
+/* motivo aleatório */
+
+.reason{
+text-align:center;
+}
+
+.spotify-player{
+    max-width:800px;
+    margin:25px auto;
+    overflow:hidden;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.reason button{
+padding:15px 30px;
+border:none;
+background:#ff6fa5;
+color:white;
+border-radius:30px;
+cursor:pointer;
+font-size:1rem;
+}
+
+.reason-box{
+margin-top:20px;
+font-size:1.2rem;
+font-weight:bold;
+color:#d63384;
+}
+
+/* timeline */
+
+.timeline{
+border-left:4px solid #ff8bb5;
+padding-left:25px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.timeline-item h3{
+color:#d63384;
+}
+
+/* envelope */
+
+.envelope{
+max-width:700px;
+margin:auto;
+text-align:center;
+}
+
+.open-btn{
+background:#ff6fa5;
+color:white;
+border:none;
+padding:15px 25px;
+border-radius:30px;
+cursor:pointer;
+}
+
+.letter{
+    max-height:0;
+    overflow:hidden;
+    margin-top:30px;
+    background:white;
+    padding:0 35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    line-height:2;
+    text-align:left;
+    transition:max-height .8s ease,padding .8s ease;
+}
+
+/* sonhos */
+
+.dreams{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.dreams li{
+margin:12px 0;
+}
+
+/* footer */
+
+footer{
+padding:80px 20px;
+text-align:center;
+background:#d63384;
+color:white;
+}
+
+footer h2{
+color:white;
+font-family:Great Vibes;
+font-size:3rem;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<header class="hero">
+<div class="hero-content">
+
+<h1>Nossa História ❤️</h1>
+
+<p>
+🌎❤️ Você é a minha pessoa favorita em todos os lugares do mundo.
+</p>
+
+<p>
+Porque o melhor destino sempre foi você.
+</p>
+
+<a href="#contador" class="btn">
+✨ Começar nossa história
+</a>
+
+</div>
+</header>
+
+<section class="nossa-musica">
+
+<h2>💖 Nossa Música</h2>
+
+<p>
+Clique para ouvir a música que sempre vai lembrar a nossa história.
+</p>
+
+<button class="music-btn" onclick="toggleMusica()">
+🎵 Tocar Nossa Música
+</button>
+
+<div id="playerMusica" style="display:none;margin-top:25px;">
+
+<iframe
+style="border-radius:12px"
+src="https://open.spotify.com/embed/track/1chcsgpMWNNfTuhXSujoUA"
+width="100%"
+height="152"
+frameborder="0"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+</div>
+
+</section>
+
+<section id="contador">
+<h2>⏳ Estamos juntas há...</h2>
+
+<div class="counter">
+
+<div class="card">
+    <span id="dias"></span>
+    <p>Dias de amor</p>
+</div>
+
+<div class="card">
+    <span id="horas"></span>
+    <p>Horas sorrindo</p>
+</div>
+
+<div class="card">
+    <span id="minutos"></span>
+    <p>Minutos juntas</p>
+</div>
+
+<div class="card">
+    <span id="segundos"></span>
+    <p>Segundos felizes</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+
+<h2>🎵 Nossa Trilha Sonora</h2>
+
+<div class="music">
+
+<p>🎶 Te Amo Sem Culpa — Carol Biazin</p>
+<p>🎶 Devagarinho — Gilsons</p>
+<p>🎶 Low Profile — Carol Biazin</p>
+<p>🎶 Lembrei de Nós — João Gomes</p>
+<p>🎶 Falei de Você Para Minha Mãe — Elana Dara</p>
+
+<div class="spotify-player">
+    <iframe
+        style="border-radius:16px"
+        src="https://open.spotify.com/embed/playlist/2kBYy9fkdGUlsbBSZINJDA?utm_source=generator&theme=0"
+        width="100%"
+        height="380"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+</div>
+
+<p style="margin-top:20px;">
+<strong>Algumas músicas contam histórias. Essas contam a nossa.</strong>
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📸 Nosso Mural de Memórias</h2>
+<p style="text-align:center;margin-bottom:30px;">
+Cada foto guarda um momento.
+Cada momento guarda um pedacinho de nós.
+</p>
+
+<div class="gallery">
+
+<div class="polaroid">
+<img src="3.jpeg">
+<p>"Meu lugar favorito é pertinho de você."</p>
+</div>
+
+<div class="polaroid">
+<img src="4.jpeg">
+<p>"Aquele dia em que o tempo resolveu desacelerar."</p>
+</div>
+
+<div class="polaroid">
+<img src="5.jpeg">
+<p>"Cantando alto e criando memórias."</p>
+</div>
+
+<div class="polaroid">
+<img src="1.jpeg">
+<p>"Uma foto simples que virou favorita."</p>
+</div>
+
+<div class="polaroid">
+<img src="7.jpeg">
+<p>"Nós. Simplesmente nós."</p>
+</div>
+
+<div class="polaroid">
+<img src="2.jpeg">
+<p>"Nós e o mar. O resto era detalhe."</p>
+</div>
+
+<div class="polaroid">
+<img src="6.jpeg">
+<p>"Descobrindo lugares com meu lar."</p>
+</div>
+
+<div class="polaroid">
+<img src="8.jpeg">
+<p>"Criando memórias nos shows."</p>
+</div>
+
+<div class="polaroid">
+<img src="9.jpeg">
+<p>"De todas as minhas certezas, você é a mais bonita."</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="reason">
+
+<h2>😂 Coisas que eu amo em você</h2>
+
+<button onclick="novoMotivo()">
+🎲 Descobrir mais um motivo
+</button>
+
+<div class="reason-box" id="motivo"></div>
+
+</section>
+
+<section>
+
+<h2>📖 Linha do Tempo</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>❤️ Primeira conversa</h3>
+<p>O início de tudo.</p>
+</div>
+
+<div class="timeline-item">
+<h3>☕ 24/10/2024</h3>
+<p>Nosso primeiro encontro.</p>
+</div>
+
+<div class="timeline-item">
+<h3>💋 25/10/2024</h3>
+<p>Nosso primeiro beijo.</p>
+</div>
+
+<div class="timeline-item">
+<h3>❤️ 25/10/2024</h3>
+<p>Começamos oficialmente nossa história.</p>
+</div>
+
+<div class="timeline-item">
+<h3>🌊 27/09/2025</h3>
+<p>Nossa primeira viagem.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>💌 Uma carta para você</h2>
+
+<div class="envelope">
+
+<button
+class="open-btn"
+id="btnCarta"
+onclick="abrirCarta()">
+💌 Abrir Carta
+</button>
+
+<div class="letter" id="carta">
+
+<p>Meu amor,</p>
+
+<p>
+Só tenho a agradecer por cada momento que construímos juntas.
+</p>
+
+<p>
+Tu me fazes transbordar.
+</p>
+
+<p>
+Essa noite eu tive um sonho tão lindo da gente no futuro...
+</p>
+
+<p>
+Vi nossa casa cheia de vida, nossos babies correndo pelo quintal e nós duas velhinhas cuidando do jardim.
+</p>
+
+<p>
+Meu maior sonho é viver tudo isso com você.
+</p>
+
+<p>
+Tu és o meu amor todinho.
+Meu sorriso mais feliz.
+Meu abraço favorito.
+Meu lugar seguro.
+</p>
+
+<p>
+Amo te amar.
+Amo nos amar.
+</p>
+
+<p>
+Te amo infinitamente ❤️
+</p>
+
+<p>
+Com amor,<br>
+<b>Pri</b>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🌟 Nossos Sonhos</h2>
+
+<div class="dreams">
+
+<ul>
+<li>☑ Continuar construindo nossa história</li>
+<li>☐ Fazer uma viagem especial</li>
+<li>☐ Morar juntas</li>
+<li>☐ Conhecer um novo país</li>
+<li>☐ Construir nossa casa</li>
+<li>☐ Ter nosso jardim</li>
+<li>☐ Nossos babies</li>
+<li>☐ Envelhecer juntas</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>❤️ Para Sempre ❤️</h2>
+
+<p>
+Casa nunca foi um lugar.
+</p>
+
+<p>
+Casa sempre foi você.
+</p>
+
+<p style="margin-top:20px;">
+🌎❤️
+</p>
+
+</footer>
+
+<script>
+
+for(let i=0;i<80;i++){
+const s=document.createElement('div');
+s.className='star';
+s.style.left=Math.random()*100+'%';
+s.style.top=Math.random()*100+'%';
+s.style.animationDelay=Math.random()*3+'s';
+document.getElementById('stars').appendChild(s);
+}
+
+const inicio=new Date("2024-10-25T00:00:00");
+
+function atualizar(){
+
+const agora=new Date();
+const diff=agora-inicio;
+
+document.getElementById('dias').innerHTML =
+Math.floor(diff/86400000);
+
+document.getElementById('horas').innerHTML =
+Math.floor(diff/3600000);
+
+document.getElementById('minutos').innerHTML =
+Math.floor(diff/60000);
+
+document.getElementById('segundos').innerHTML =
+Math.floor(diff/1000);
+
+}
+
+setInterval(atualizar,1000);
+atualizar();
+
+const motivos=[
+"Nosso beijo",
+"Tua risada",
+"Teu abraço",
+"Teu carinho",
+"Teu jeitinho",
+"Teu olhar",
+"Como você segura minha mão",
+"Como você cuida de mim",
+"Como você me faz rir",
+"Como você transforma dias comuns em especiais",
+"Como você me faz sentir em casa",
+"Porque a vida é mais bonita ao teu lado",
+"Porque você é meu lugar favorito"
+];
+
+novoMotivo();
+	
+function novoMotivo(){
+document.getElementById("motivo").innerHTML=
+motivos[Math.floor(Math.random()*motivos.length)];
+}
+
+function abrirCarta(){
+
+    const carta = document.getElementById("carta");
+    const botao = document.getElementById("btnCarta");
+
+    if(carta.style.maxHeight && carta.style.maxHeight !== "0px"){
+
+        carta.style.maxHeight = "0px";
+        carta.style.padding = "0 35px";
+
+        botao.innerHTML = "💌 Abrir Carta";
+
+    }else{
+
+        carta.style.padding = "35px";
+        carta.style.maxHeight = carta.scrollHeight + "px";
+
+        botao.innerHTML = "❤️ Fechar Carta";
+
+    }
+
+}
+
+function toggleMusica(){
+
+    const player = document.getElementById("playerMusica");
+    const botao = document.querySelector(".music-btn");
+
+    if(player.style.display === "block"){
+
+        player.style.display = "none";
+        botao.innerHTML = "🎵 Tocar Nossa Música";
+
+    }else{
+
+        player.style.display = "block";
+        botao.innerHTML = "❤️ Esconder Música";
+
+    }
+
+}
+</script>
+
+</body>
+</html>
